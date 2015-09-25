@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1561BB5A4F1007E2E5D /* AppDelegate.m */; };
+		639AB15A1BB5A4F1007E2E5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1591BB5A4F1007E2E5D /* main.m */; };
+		639AB15C1BB5A4F1007E2E5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639AB15B1BB5A4F1007E2E5D /* Assets.xcassets */; };
+		639AB15F1BB5A4F1007E2E5D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639AB15D1BB5A4F1007E2E5D /* MainMenu.xib */; };
+		639AB16A1BB5A4F1007E2E5D /* FXShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1691BB5A4F1007E2E5D /* FXShareTests.m */; };
+		639AB1751BB5A4F1007E2E5D /* FXShareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1741BB5A4F1007E2E5D /* FXShareUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		639AB1661BB5A4F1007E2E5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639AB14A1BB5A4F1007E2E5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639AB1511BB5A4F1007E2E5D;
+			remoteInfo = FXShare;
+		};
+		639AB1711BB5A4F1007E2E5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639AB14A1BB5A4F1007E2E5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639AB1511BB5A4F1007E2E5D;
+			remoteInfo = FXShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		639AB1521BB5A4F1007E2E5D /* FXShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB1551BB5A4F1007E2E5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		639AB1561BB5A4F1007E2E5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		639AB1591BB5A4F1007E2E5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		639AB15B1BB5A4F1007E2E5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		639AB15E1BB5A4F1007E2E5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		639AB1601BB5A4F1007E2E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB1651BB5A4F1007E2E5D /* FXShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB1691BB5A4F1007E2E5D /* FXShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FXShareTests.m; sourceTree = "<group>"; };
+		639AB16B1BB5A4F1007E2E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB1701BB5A4F1007E2E5D /* FXShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB1741BB5A4F1007E2E5D /* FXShareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FXShareUITests.m; sourceTree = "<group>"; };
+		639AB1761BB5A4F1007E2E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		639AB14F1BB5A4F1007E2E5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1621BB5A4F1007E2E5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB16D1BB5A4F1007E2E5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		639AB1491BB5A4F1007E2E5D = {
+			isa = PBXGroup;
+			children = (
+				639AB1541BB5A4F1007E2E5D /* FXShare */,
+				639AB1681BB5A4F1007E2E5D /* FXShareTests */,
+				639AB1731BB5A4F1007E2E5D /* FXShareUITests */,
+				639AB1531BB5A4F1007E2E5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		639AB1531BB5A4F1007E2E5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1521BB5A4F1007E2E5D /* FXShare.app */,
+				639AB1651BB5A4F1007E2E5D /* FXShareTests.xctest */,
+				639AB1701BB5A4F1007E2E5D /* FXShareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		639AB1541BB5A4F1007E2E5D /* FXShare */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1551BB5A4F1007E2E5D /* AppDelegate.h */,
+				639AB1561BB5A4F1007E2E5D /* AppDelegate.m */,
+				639AB15B1BB5A4F1007E2E5D /* Assets.xcassets */,
+				639AB15D1BB5A4F1007E2E5D /* MainMenu.xib */,
+				639AB1601BB5A4F1007E2E5D /* Info.plist */,
+				639AB1581BB5A4F1007E2E5D /* Supporting Files */,
+			);
+			path = FXShare;
+			sourceTree = "<group>";
+		};
+		639AB1581BB5A4F1007E2E5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1591BB5A4F1007E2E5D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		639AB1681BB5A4F1007E2E5D /* FXShareTests */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1691BB5A4F1007E2E5D /* FXShareTests.m */,
+				639AB16B1BB5A4F1007E2E5D /* Info.plist */,
+			);
+			path = FXShareTests;
+			sourceTree = "<group>";
+		};
+		639AB1731BB5A4F1007E2E5D /* FXShareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1741BB5A4F1007E2E5D /* FXShareUITests.m */,
+				639AB1761BB5A4F1007E2E5D /* Info.plist */,
+			);
+			path = FXShareUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		639AB1511BB5A4F1007E2E5D /* FXShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB1791BB5A4F1007E2E5D /* Build configuration list for PBXNativeTarget "FXShare" */;
+			buildPhases = (
+				639AB14E1BB5A4F1007E2E5D /* Sources */,
+				639AB14F1BB5A4F1007E2E5D /* Frameworks */,
+				639AB1501BB5A4F1007E2E5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FXShare;
+			productName = FXShare;
+			productReference = 639AB1521BB5A4F1007E2E5D /* FXShare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		639AB1641BB5A4F1007E2E5D /* FXShareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB17C1BB5A4F1007E2E5D /* Build configuration list for PBXNativeTarget "FXShareTests" */;
+			buildPhases = (
+				639AB1611BB5A4F1007E2E5D /* Sources */,
+				639AB1621BB5A4F1007E2E5D /* Frameworks */,
+				639AB1631BB5A4F1007E2E5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639AB1671BB5A4F1007E2E5D /* PBXTargetDependency */,
+			);
+			name = FXShareTests;
+			productName = FXShareTests;
+			productReference = 639AB1651BB5A4F1007E2E5D /* FXShareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		639AB16F1BB5A4F1007E2E5D /* FXShareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB17F1BB5A4F1007E2E5D /* Build configuration list for PBXNativeTarget "FXShareUITests" */;
+			buildPhases = (
+				639AB16C1BB5A4F1007E2E5D /* Sources */,
+				639AB16D1BB5A4F1007E2E5D /* Frameworks */,
+				639AB16E1BB5A4F1007E2E5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639AB1721BB5A4F1007E2E5D /* PBXTargetDependency */,
+			);
+			name = FXShareUITests;
+			productName = FXShareUITests;
+			productReference = 639AB1701BB5A4F1007E2E5D /* FXShareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		639AB14A1BB5A4F1007E2E5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Zeacone;
+				TargetAttributes = {
+					639AB1511BB5A4F1007E2E5D = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					639AB1641BB5A4F1007E2E5D = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 639AB1511BB5A4F1007E2E5D;
+					};
+					639AB16F1BB5A4F1007E2E5D = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 639AB1511BB5A4F1007E2E5D;
+					};
+				};
+			};
+			buildConfigurationList = 639AB14D1BB5A4F1007E2E5D /* Build configuration list for PBXProject "FXShare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 639AB1491BB5A4F1007E2E5D;
+			productRefGroup = 639AB1531BB5A4F1007E2E5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				639AB1511BB5A4F1007E2E5D /* FXShare */,
+				639AB1641BB5A4F1007E2E5D /* FXShareTests */,
+				639AB16F1BB5A4F1007E2E5D /* FXShareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		639AB1501BB5A4F1007E2E5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB15C1BB5A4F1007E2E5D /* Assets.xcassets in Resources */,
+				639AB15F1BB5A4F1007E2E5D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1631BB5A4F1007E2E5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB16E1BB5A4F1007E2E5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		639AB14E1BB5A4F1007E2E5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB15A1BB5A4F1007E2E5D /* main.m in Sources */,
+				639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1611BB5A4F1007E2E5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB16A1BB5A4F1007E2E5D /* FXShareTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB16C1BB5A4F1007E2E5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB1751BB5A4F1007E2E5D /* FXShareUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		639AB1671BB5A4F1007E2E5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639AB1511BB5A4F1007E2E5D /* FXShare */;
+			targetProxy = 639AB1661BB5A4F1007E2E5D /* PBXContainerItemProxy */;
+		};
+		639AB1721BB5A4F1007E2E5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639AB1511BB5A4F1007E2E5D /* FXShare */;
+			targetProxy = 639AB1711BB5A4F1007E2E5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		639AB15D1BB5A4F1007E2E5D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639AB15E1BB5A4F1007E2E5D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		639AB1771BB5A4F1007E2E5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		639AB1781BB5A4F1007E2E5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		639AB17A1BB5A4F1007E2E5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FXShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeacone.FXShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		639AB17B1BB5A4F1007E2E5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FXShare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeacone.FXShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		639AB17D1BB5A4F1007E2E5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FXShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeacone.FXShareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FXShare.app/Contents/MacOS/FXShare";
+			};
+			name = Debug;
+		};
+		639AB17E1BB5A4F1007E2E5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FXShareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeacone.FXShareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FXShare.app/Contents/MacOS/FXShare";
+			};
+			name = Release;
+		};
+		639AB1801BB5A4F1007E2E5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FXShareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeacone.FXShareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FXShare;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		639AB1811BB5A4F1007E2E5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FXShareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeacone.FXShareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FXShare;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		639AB14D1BB5A4F1007E2E5D /* Build configuration list for PBXProject "FXShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1771BB5A4F1007E2E5D /* Debug */,
+				639AB1781BB5A4F1007E2E5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639AB1791BB5A4F1007E2E5D /* Build configuration list for PBXNativeTarget "FXShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB17A1BB5A4F1007E2E5D /* Debug */,
+				639AB17B1BB5A4F1007E2E5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		639AB17C1BB5A4F1007E2E5D /* Build configuration list for PBXNativeTarget "FXShareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB17D1BB5A4F1007E2E5D /* Debug */,
+				639AB17E1BB5A4F1007E2E5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		639AB17F1BB5A4F1007E2E5D /* Build configuration list for PBXNativeTarget "FXShareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1801BB5A4F1007E2E5D /* Debug */,
+				639AB1811BB5A4F1007E2E5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 639AB14A1BB5A4F1007E2E5D /* Project object */;
+}
