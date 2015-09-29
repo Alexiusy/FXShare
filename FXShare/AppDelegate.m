@@ -11,16 +11,24 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    [self.window setLevel:kCGBaseWindowLevelKey];
+    
+    self.mainController = [[MainWindowController alloc] initWithWindowNibName:@"MainWindowController"];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
 
+- (IBAction)click:(NSButton *)sender {
+    [self.mainController.mainWindow makeKeyAndOrderFront:self];
+    [self.mainController.mainWindow setLevel:kCGBaseWindowLevelKey];
+}
 @end

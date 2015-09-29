@@ -13,6 +13,9 @@
 		639AB15F1BB5A4F1007E2E5D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639AB15D1BB5A4F1007E2E5D /* MainMenu.xib */; };
 		639AB16A1BB5A4F1007E2E5D /* FXShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1691BB5A4F1007E2E5D /* FXShareTests.m */; };
 		639AB1751BB5A4F1007E2E5D /* FXShareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1741BB5A4F1007E2E5D /* FXShareUITests.m */; };
+		639AB1851BB5A631007E2E5D /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1831BB5A631007E2E5D /* MainWindowController.m */; settings = {ASSET_TAGS = (); }; };
+		639AB1861BB5A631007E2E5D /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639AB1841BB5A631007E2E5D /* MainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
+		639AB1911BB78CA8007E2E5D /* FileShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1901BB78CA8007E2E5D /* FileShareManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,11 @@
 		639AB1701BB5A4F1007E2E5D /* FXShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		639AB1741BB5A4F1007E2E5D /* FXShareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FXShareUITests.m; sourceTree = "<group>"; };
 		639AB1761BB5A4F1007E2E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB1821BB5A631007E2E5D /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		639AB1831BB5A631007E2E5D /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		639AB1841BB5A631007E2E5D /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		639AB18F1BB78CA8007E2E5D /* FileShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileShareManager.h; sourceTree = "<group>"; };
+		639AB1901BB78CA8007E2E5D /* FileShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileShareManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +104,12 @@
 		639AB1541BB5A4F1007E2E5D /* FXShare */ = {
 			isa = PBXGroup;
 			children = (
+				639AB18E1BB78CA8007E2E5D /* Utils */,
 				639AB1551BB5A4F1007E2E5D /* AppDelegate.h */,
 				639AB1561BB5A4F1007E2E5D /* AppDelegate.m */,
+				639AB1821BB5A631007E2E5D /* MainWindowController.h */,
+				639AB1831BB5A631007E2E5D /* MainWindowController.m */,
+				639AB1841BB5A631007E2E5D /* MainWindowController.xib */,
 				639AB15B1BB5A4F1007E2E5D /* Assets.xcassets */,
 				639AB15D1BB5A4F1007E2E5D /* MainMenu.xib */,
 				639AB1601BB5A4F1007E2E5D /* Info.plist */,
@@ -130,6 +142,15 @@
 				639AB1761BB5A4F1007E2E5D /* Info.plist */,
 			);
 			path = FXShareUITests;
+			sourceTree = "<group>";
+		};
+		639AB18E1BB78CA8007E2E5D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				639AB18F1BB78CA8007E2E5D /* FileShareManager.h */,
+				639AB1901BB78CA8007E2E5D /* FileShareManager.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				639AB15C1BB5A4F1007E2E5D /* Assets.xcassets in Resources */,
+				639AB1861BB5A631007E2E5D /* MainWindowController.xib in Resources */,
 				639AB15F1BB5A4F1007E2E5D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639AB1851BB5A631007E2E5D /* MainWindowController.m in Sources */,
 				639AB15A1BB5A4F1007E2E5D /* main.m in Sources */,
 				639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */,
+				639AB1911BB78CA8007E2E5D /* FileShareManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

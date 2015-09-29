@@ -8,8 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "MainWindowController.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (strong) MainWindowController *mainController;
+
+- (IBAction)click:(NSButton *)sender;
 
 @end
-

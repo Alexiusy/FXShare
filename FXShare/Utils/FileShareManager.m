@@ -10,4 +10,20 @@
 
 @implementation FileShareManager
 
+- (void)connectWithParameter:(NSDictionary *)parameter start:(void(^)(BOOL start))startBlock result:(void(^)(BOOL result, NSInteger code))resultBlock {
+    
+}
+
+- (void)checkConnectIsOnline:(NSDictionary *)parameter {
+    
+}
+
+- (void)disConnectWithParameter:(NSDictionary *)parameter {
+    
+}
+
+- (void)cancelConnectWithParameter:(NSDictionary *)parameter {
+    
+}
+
 @end
