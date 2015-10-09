@@ -1,4 +1,4 @@
-# Introduction
+# Introduction [![GitHub release](https://img.shields.io/github/release/carthage/carthage.svg)](https://github.com/Carthage/Carthage/releases)
 FXShare is a tool for mounting a disk driver to OS X. It provides NFS and CIFS protocol to do these things.
 
 # How To Use
