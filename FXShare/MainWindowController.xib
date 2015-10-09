@@ -277,7 +277,7 @@
             </connections>
             <point key="canvasLocation" x="304" y="326"/>
         </window>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="QFZ-JO-Kxd" customClass="NSPanel">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="QFZ-JO-Kxd" customClass="FXPanel">
             <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="136" y="163" width="450" height="280"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -308,6 +308,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="mOa-qu-byd" name="value" keyPath="username" id="x6e-3E-qhD"/>
+                        </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-pX-QVf">
                         <rect key="frame" x="150" y="70" width="250" height="22"/>
@@ -437,6 +440,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="mOa-qu-byd" name="value" keyPath="username" id="cts-sJ-FNs"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>
@@ -498,5 +504,7 @@
             </connections>
             <point key="canvasLocation" x="256" y="717"/>
         </window>
+        <customObject id="mOa-qu-byd" customClass="MainWindowController"/>
+        <userDefaultsController representsSharedInstance="YES" id="dJb-L8-Rab"/>
     </objects>
 </document>

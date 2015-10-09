@@ -30,5 +30,6 @@
 - (IBAction)click:(NSButton *)sender {
     [self.mainController.mainWindow makeKeyAndOrderFront:self];
     [self.mainController.mainWindow setLevel:kCGBaseWindowLevelKey];
+    [self.window orderOut:self];
 }
 @end

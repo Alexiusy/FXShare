@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MainWindowController : NSWindowController
+@interface MainWindowController : NSWindowController {
+    @private
+    NSString *_username;
+}
 
 @property (strong) IBOutlet NSWindow *mainWindow;
 @property (strong) IBOutlet NSWindow *configWindow;
@@ -28,5 +31,12 @@
  *  Cancel adding new information
  */
 - (IBAction)cancelConfiguration:(NSButton *)sender;
+
+#pragma mark - Config window elements
+@property (nonatomic, copy) NSString  *protocol;
+@property (nonatomic, copy) NSString  *userField;
+@property (nonatomic, copy) NSString  *passField;
+@property (nonatomic, copy) NSString  *urlField;
+@property (nonatomic, copy) NSString  *pathField;
 
 @end
