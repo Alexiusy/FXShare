@@ -14,11 +14,14 @@
 
 @implementation MainWindowController
 
+//@synthesize sourcedata;
+
 #pragma mark - Lifecycle
 
 - (instancetype)initWithWindowNibName:(NSString *)windowNibName{
     if (self = [super initWithWindowNibName:windowNibName]) {
         [self showWindow:self];
+        self.sourcedata = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -33,7 +36,7 @@
 
 - (IBAction)showConfigWindowAsSheet:(NSButton *)sender {
     [self.mainWindow beginSheet:self.configWindow completionHandler:^(NSModalResponse returnCode) {
-        
+        NSLog(@"%@", self.sourcedata);
     }];
 }
 
