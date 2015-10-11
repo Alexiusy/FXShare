@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         self.protocol = @"CIFS";
-        self.count = 2;
+        self.count = 1;
         self.username = @"Zeacone";
         self.url = @"127.0.0.1/cifs";
         self.path = @"/Users/Zeacone/Desktop/show/";
