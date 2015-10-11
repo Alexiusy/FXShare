@@ -9,8 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface MainWindowController : NSWindowController {
-    @private
+//    @private
     NSString *_username;
+//    NSMutableArray *sourcedata;
 }
 
 @property (strong) IBOutlet NSWindow *mainWindow;
@@ -38,5 +39,6 @@
 @property (nonatomic, copy) NSString  *passField;
 @property (nonatomic, copy) NSString  *urlField;
 @property (nonatomic, copy) NSString  *pathField;
+@property (copy) NSMutableArray *sourcedata;
 
 @end

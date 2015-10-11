@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		636E682F1BC7ED7C0063192D /* FXCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E682E1BC7ED7C0063192D /* FXCustom.m */; settings = {ASSET_TAGS = (); }; };
+		636E68361BCA60650063192D /* SourceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E68351BCA60650063192D /* SourceViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1561BB5A4F1007E2E5D /* AppDelegate.m */; };
 		639AB15A1BB5A4F1007E2E5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1591BB5A4F1007E2E5D /* main.m */; };
 		639AB15C1BB5A4F1007E2E5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639AB15B1BB5A4F1007E2E5D /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		636E682D1BC7ED7C0063192D /* FXCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXCustom.h; sourceTree = "<group>"; };
 		636E682E1BC7ED7C0063192D /* FXCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXCustom.m; sourceTree = "<group>"; };
+		636E68341BCA60650063192D /* SourceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceViewModel.h; sourceTree = "<group>"; };
+		636E68351BCA60650063192D /* SourceViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceViewModel.m; sourceTree = "<group>"; };
 		639AB1521BB5A4F1007E2E5D /* FXShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639AB1551BB5A4F1007E2E5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		639AB1561BB5A4F1007E2E5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,6 +96,15 @@
 			path = Help;
 			sourceTree = "<group>";
 		};
+		636E68331BCA60440063192D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				636E68341BCA60650063192D /* SourceViewModel.h */,
+				636E68351BCA60650063192D /* SourceViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		639AB1491BB5A4F1007E2E5D = {
 			isa = PBXGroup;
 			children = (
@@ -116,13 +128,14 @@
 		639AB1541BB5A4F1007E2E5D /* FXShare */ = {
 			isa = PBXGroup;
 			children = (
-				636E682C1BC7ED1C0063192D /* Help */,
-				639AB18E1BB78CA8007E2E5D /* Utils */,
 				639AB1551BB5A4F1007E2E5D /* AppDelegate.h */,
 				639AB1561BB5A4F1007E2E5D /* AppDelegate.m */,
 				639AB1821BB5A631007E2E5D /* MainWindowController.h */,
 				639AB1831BB5A631007E2E5D /* MainWindowController.m */,
 				639AB1841BB5A631007E2E5D /* MainWindowController.xib */,
+				636E68331BCA60440063192D /* ViewModels */,
+				636E682C1BC7ED1C0063192D /* Help */,
+				639AB18E1BB78CA8007E2E5D /* Utils */,
 				639AB15B1BB5A4F1007E2E5D /* Assets.xcassets */,
 				639AB15D1BB5A4F1007E2E5D /* MainMenu.xib */,
 				639AB1601BB5A4F1007E2E5D /* Info.plist */,
@@ -301,6 +314,7 @@
 				639AB15A1BB5A4F1007E2E5D /* main.m in Sources */,
 				639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */,
 				639AB1911BB78CA8007E2E5D /* FileShareManager.m in Sources */,
+				636E68361BCA60650063192D /* SourceViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
