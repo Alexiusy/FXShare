@@ -30,9 +30,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="add:" target="yzB-bk-vrN" id="yIz-3s-GV9"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-Xj-tol">
                         <rect key="frame" x="170" y="39" width="60" height="23"/>
@@ -44,9 +41,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="remove:" target="yzB-bk-vrN" id="LHv-2i-xOL"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xYK-vc-jxn">
                         <rect key="frame" x="270" y="39" width="60" height="23"/>
@@ -80,6 +74,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="remove:" target="yzB-bk-vrN" id="Ai4-Wd-pHF"/>
+                        </connections>
                     </button>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFj-DG-ngM">
                         <rect key="frame" x="40" y="82" width="520" height="256"/>
@@ -242,6 +239,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="password" id="ZFw-xf-HRC"/>
+                        </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QSU-zn-Ake">
                         <rect key="frame" x="150" y="112" width="250" height="22"/>
@@ -254,6 +254,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="url" id="ida-f7-VSl"/>
+                        </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-pX-QVf">
                         <rect key="frame" x="150" y="70" width="250" height="22"/>
@@ -266,6 +269,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="path" id="7Ff-i2-i9S"/>
+                        </connections>
                     </textField>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="le1-T8-j8e">
                         <rect key="frame" x="148" y="235" width="255" height="27"/>
@@ -283,6 +289,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <binding destination="VnP-dU-Zae" name="selectedIndex" keyPath="selectedProtocol" id="tB4-ke-raR"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Xi-Bg-iD8">
                         <rect key="frame" x="38" y="238" width="84" height="22"/>
@@ -355,7 +364,7 @@
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
                         <connections>
-                            <action selector="confirmConfiguration:" target="-2" id="v8y-u9-Mcm"/>
+                            <action selector="add:" target="yzB-bk-vrN" id="RPW-Db-RlQ"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dEt-Cw-jpE">
@@ -383,6 +392,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="username" id="Cpp-Qo-1da"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>
@@ -456,5 +468,6 @@
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="dJb-L8-Rab"/>
+        <customObject id="VnP-dU-Zae" customClass="SourceViewModel"/>
     </objects>
 </document>

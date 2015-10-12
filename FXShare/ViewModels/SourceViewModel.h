@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SourceViewModel : NSObject
+@interface SourceViewModel : NSObject <NSCoding>
 
-@property (nonatomic, assign) NSInteger count;
-@property (nonatomic, copy) NSString *protocol, *username, *url, *path;
+@property (nonatomic, assign) NSInteger count, selectedProtocol;
+@property (nonatomic, copy) NSString *protocol, *username, *password, *url, *path;
 
 @end

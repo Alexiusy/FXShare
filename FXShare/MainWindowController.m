@@ -21,7 +21,12 @@
 - (instancetype)initWithWindowNibName:(NSString *)windowNibName{
     if (self = [super initWithWindowNibName:windowNibName]) {
         [self showWindow:self];
-        self.sourcedata = [[NSMutableArray alloc] init];
+        
+        NSString *archivePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"archive"];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:archivePath]) {
+            [[NSFileManager defaultManager] createFileAtPath:archivePath contents:nil attributes:nil];
+        }
+        self.sourcedata = [[NSMutableArray alloc] initWithArray:[NSKeyedUnarchiver unarchiveObjectWithFile:archivePath]];
     }
     return self;
 }
@@ -36,7 +41,8 @@
 
 - (IBAction)showConfigWindowAsSheet:(NSButton *)sender {
     [self.mainWindow beginSheet:self.configWindow completionHandler:^(NSModalResponse returnCode) {
-        NSLog(@"%@", self.sourcedata);
+        NSString *archivePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"archive"];
+        [NSKeyedArchiver archiveRootObject:self.sourcedata toFile:archivePath];
     }];
 }
 
