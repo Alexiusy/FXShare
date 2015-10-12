@@ -1,5 +1,7 @@
 # FXShare
-[![build](https://travis-ci.org/Zeacone/FXShare.svg?branch=master)](https://travis-ci.org/Zeacone/FXShare)
+[![Travis CI](https://travis-ci.org/Zeacone/FXShare.svg?branch=master)](https://travis-ci.org/Zeacone/FXShare)
+![Version](https://img.shields.io/badge/Version-0.1.0-green.svg)
+[![License](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/Zeacone/FXShare/blob/master/LICENSE)
 # Introduction
 FXShare is a tool for mounting a disk driver to OS X. It provides NFS and CIFS protocol to do these things.
 
