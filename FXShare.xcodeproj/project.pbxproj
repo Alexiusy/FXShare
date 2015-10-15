@@ -20,6 +20,7 @@
 		639AB1911BB78CA8007E2E5D /* FileShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1901BB78CA8007E2E5D /* FileShareManager.m */; settings = {ASSET_TAGS = (); }; };
 		63DDDD291BCD59D9001BEE03 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD261BCD59D9001BEE03 /* SimplePing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		63DDDD2A1BCD59D9001BEE03 /* SimplePingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD281BCD59D9001BEE03 /* SimplePingHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		63DDDD2D1BCD5E54001BEE03 /* CheckPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD2C1BCD5E54001BEE03 /* CheckPing.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		63DDDD261BCD59D9001BEE03 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		63DDDD271BCD59D9001BEE03 /* SimplePingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePingHelper.h; sourceTree = "<group>"; };
 		63DDDD281BCD59D9001BEE03 /* SimplePingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePingHelper.m; sourceTree = "<group>"; };
+		63DDDD2B1BCD5E54001BEE03 /* CheckPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPing.h; sourceTree = "<group>"; };
+		63DDDD2C1BCD5E54001BEE03 /* CheckPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 			children = (
 				63DDDD251BCD59D9001BEE03 /* SimplePing.h */,
 				63DDDD261BCD59D9001BEE03 /* SimplePing.m */,
+				63DDDD2B1BCD5E54001BEE03 /* CheckPing.h */,
+				63DDDD2C1BCD5E54001BEE03 /* CheckPing.m */,
 				63DDDD271BCD59D9001BEE03 /* SimplePingHelper.h */,
 				63DDDD281BCD59D9001BEE03 /* SimplePingHelper.m */,
 			);
@@ -329,6 +334,7 @@
 			files = (
 				639AB1851BB5A631007E2E5D /* MainWindowController.m in Sources */,
 				636E682F1BC7ED7C0063192D /* FXCustom.m in Sources */,
+				63DDDD2D1BCD5E54001BEE03 /* CheckPing.m in Sources */,
 				639AB15A1BB5A4F1007E2E5D /* main.m in Sources */,
 				639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */,
 				639AB1911BB78CA8007E2E5D /* FileShareManager.m in Sources */,
