@@ -17,7 +17,6 @@
 		639AB1751BB5A4F1007E2E5D /* FXShareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1741BB5A4F1007E2E5D /* FXShareUITests.m */; };
 		639AB1851BB5A631007E2E5D /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1831BB5A631007E2E5D /* MainWindowController.m */; settings = {ASSET_TAGS = (); }; };
 		639AB1861BB5A631007E2E5D /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639AB1841BB5A631007E2E5D /* MainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
-		639AB1911BB78CA8007E2E5D /* FileShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1901BB78CA8007E2E5D /* FileShareManager.m */; settings = {ASSET_TAGS = (); }; };
 		63DDDD291BCD59D9001BEE03 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD261BCD59D9001BEE03 /* SimplePing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		63DDDD2A1BCD59D9001BEE03 /* SimplePingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD281BCD59D9001BEE03 /* SimplePingHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		63DDDD2D1BCD5E54001BEE03 /* CheckPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD2C1BCD5E54001BEE03 /* CheckPing.m */; settings = {ASSET_TAGS = (); }; };
@@ -61,8 +60,6 @@
 		639AB1821BB5A631007E2E5D /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		639AB1831BB5A631007E2E5D /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; wrapsLines = 1; };
 		639AB1841BB5A631007E2E5D /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
-		639AB18F1BB78CA8007E2E5D /* FileShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileShareManager.h; sourceTree = "<group>"; };
-		639AB1901BB78CA8007E2E5D /* FileShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileShareManager.m; sourceTree = "<group>"; };
 		63DDDD251BCD59D9001BEE03 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		63DDDD261BCD59D9001BEE03 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		63DDDD271BCD59D9001BEE03 /* SimplePingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePingHelper.h; sourceTree = "<group>"; };
@@ -183,8 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				63DDDD241BCD59D9001BEE03 /* Reachability */,
-				639AB18F1BB78CA8007E2E5D /* FileShareManager.h */,
-				639AB1901BB78CA8007E2E5D /* FileShareManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -337,7 +332,6 @@
 				63DDDD2D1BCD5E54001BEE03 /* CheckPing.m in Sources */,
 				639AB15A1BB5A4F1007E2E5D /* main.m in Sources */,
 				639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */,
-				639AB1911BB78CA8007E2E5D /* FileShareManager.m in Sources */,
 				63DDDD2A1BCD59D9001BEE03 /* SimplePingHelper.m in Sources */,
 				63DDDD291BCD59D9001BEE03 /* SimplePing.m in Sources */,
 				636E68361BCA60650063192D /* SourceViewModel.m in Sources */,
