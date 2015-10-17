@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SimplePingHelper.h"
 
 @interface CheckPing : NSObject
+
+@property (nonatomic, copy) NSString *host;
 
 @end

@@ -10,21 +10,41 @@
 
 @implementation CheckPing
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self pingTool];
-    }
-    return self;
++ (instancetype)sharedChecker {
+    static CheckPing *checker = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        checker = [[self alloc] init];
+    });
+    return checker;
+}
+
+static dispatch_group_t get_check_server_connection_group() {
+    static dispatch_group_t check_server_group;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        check_server_group = dispatch_group_create();
+    });
+    return check_server_group;
+}
+
+static dispatch_queue_t get_check_server_connection_queue() {
+    static dispatch_queue_t check_server_queue;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        check_server_queue = dispatch_queue_create("server.connection.queue", DISPATCH_QUEUE_CONCURRENT);
+    });
+    return check_server_queue;
 }
 
 - (void)pingTool {
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    dispatch_group_async(group, queue, ^{
-        
+    dispatch_group_async(get_check_server_connection_group(), get_check_server_connection_queue(), ^{
+        [SimplePingHelper ping:self.host target:self sel:@selector(result:)];
     });
+}
+
+- (void)result:(BOOL)success {
+    
 }
 
 @end
