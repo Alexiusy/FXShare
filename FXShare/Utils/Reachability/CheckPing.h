@@ -13,4 +13,7 @@
 
 @property (nonatomic, copy) NSString *host;
 
++ (instancetype)sharedChecker;
+- (void)pingTool;
+
 @end
