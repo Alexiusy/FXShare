@@ -44,6 +44,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
         NSLog(@"thread = %@", [NSThread currentThread]);
         NSRunLoop *runloop = [NSRunLoop currentRunLoop];
         [runloop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+        runloop addTimer:[NSTimer timerWithTimeInterval:<#(NSTimeInterval)#> target:<#(nonnull id)#> selector:<#(nonnull SEL)#> userInfo:<#(nullable id)#> repeats:<#(BOOL)#>] forMode:<#(nonnull NSString *)#>
         [runloop run];
     });
 }
