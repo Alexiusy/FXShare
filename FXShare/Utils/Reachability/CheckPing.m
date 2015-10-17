@@ -52,4 +52,8 @@ static dispatch_queue_t get_check_server_connection_queue() {
     NSLog(@"result = %hhd, thread = %@", success.boolValue, [NSThread currentThread]);
 }
 
+- (void)connectionPool {
+    
+}
+
 @end
