@@ -40,13 +40,16 @@ static dispatch_queue_t get_check_server_connection_queue() {
 - (void)pingTool {
     dispatch_group_async(get_check_server_connection_group(), get_check_server_connection_queue(), ^{
         
-        [SimplePingHelper ping:@"104.128.84.143" target:self sel:@selector(result:)];
-        NSLog(@"thread = %@", [NSThread currentThread]);
+        NSTimer *timer = [NSTimer timerWithTimeInterval:10.0 target:self selector:@selector(executeChecking) userInfo:nil repeats:YES];
         NSRunLoop *runloop = [NSRunLoop currentRunLoop];
         [runloop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
-        runloop addTimer:[NSTimer timerWithTimeInterval:<#(NSTimeInterval)#> target:<#(nonnull id)#> selector:<#(nonnull SEL)#> userInfo:<#(nullable id)#> repeats:<#(BOOL)#>] forMode:<#(nonnull NSString *)#>
+        [runloop addTimer:timer forMode:NSRunLoopCommonModes];
         [runloop run];
     });
+}
+
+- (void)executeChecking {
+    [SimplePingHelper ping:@"104.128.84.143" target:self sel:@selector(result:)];
 }
 
 - (void)result:(NSNumber *)success {
