@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PingTool.h"
 #import "SimplePingHelper.h"
 
 @interface CheckPing : NSObject
