@@ -20,8 +20,6 @@
 		639AB1851BB5A631007E2E5D /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1831BB5A631007E2E5D /* MainWindowController.m */; settings = {ASSET_TAGS = (); }; };
 		639AB1861BB5A631007E2E5D /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639AB1841BB5A631007E2E5D /* MainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
 		63DDDD291BCD59D9001BEE03 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD261BCD59D9001BEE03 /* SimplePing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		63DDDD2A1BCD59D9001BEE03 /* SimplePingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD281BCD59D9001BEE03 /* SimplePingHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		63DDDD2D1BCD5E54001BEE03 /* CheckPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DDDD2C1BCD5E54001BEE03 /* CheckPing.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +65,6 @@
 		639AB1841BB5A631007E2E5D /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		63DDDD251BCD59D9001BEE03 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		63DDDD261BCD59D9001BEE03 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
-		63DDDD271BCD59D9001BEE03 /* SimplePingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePingHelper.h; sourceTree = "<group>"; };
-		63DDDD281BCD59D9001BEE03 /* SimplePingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePingHelper.m; sourceTree = "<group>"; };
-		63DDDD2B1BCD5E54001BEE03 /* CheckPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPing.h; sourceTree = "<group>"; };
-		63DDDD2C1BCD5E54001BEE03 /* CheckPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,12 +190,8 @@
 			children = (
 				63DDDD251BCD59D9001BEE03 /* SimplePing.h */,
 				63DDDD261BCD59D9001BEE03 /* SimplePing.m */,
-				63DDDD2B1BCD5E54001BEE03 /* CheckPing.h */,
-				63DDDD2C1BCD5E54001BEE03 /* CheckPing.m */,
 				631CE5741BD341BD00715430 /* PingTool.h */,
 				631CE5751BD341BD00715430 /* PingTool.m */,
-				63DDDD271BCD59D9001BEE03 /* SimplePingHelper.h */,
-				63DDDD281BCD59D9001BEE03 /* SimplePingHelper.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -338,10 +328,8 @@
 			files = (
 				639AB1851BB5A631007E2E5D /* MainWindowController.m in Sources */,
 				636E682F1BC7ED7C0063192D /* FXCustom.m in Sources */,
-				63DDDD2D1BCD5E54001BEE03 /* CheckPing.m in Sources */,
 				639AB15A1BB5A4F1007E2E5D /* main.m in Sources */,
 				639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */,
-				63DDDD2A1BCD59D9001BEE03 /* SimplePingHelper.m in Sources */,
 				631CE5761BD341BD00715430 /* PingTool.m in Sources */,
 				63DDDD291BCD59D9001BEE03 /* SimplePing.m in Sources */,
 				636E68361BCA60650063192D /* SourceViewModel.m in Sources */,

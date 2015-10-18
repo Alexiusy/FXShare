@@ -8,11 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "SimplePing.h"
-#import "SimplePingHelper.h"
 
 @interface PingTool : NSObject <SimplePingDelegate>
 
-- (void)pingWithHost:(NSString *)host;
-- (void)pingTool;
+- (void)startPing;
 
 @end
