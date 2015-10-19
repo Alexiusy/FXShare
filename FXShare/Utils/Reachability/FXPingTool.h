@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "SimplePing.h"
 
-@interface PingTool : NSObject <SimplePingDelegate>
+@interface FXPingTool : NSObject <SimplePingDelegate>
 
 - (void)startPing;
+
+@end
+
+@interface FXCheckingTool : NSObject
 
 @end

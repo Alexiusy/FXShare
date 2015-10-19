@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "FXPingTool.h"
 
 @interface MainWindowController : NSWindowController {
 //    @private

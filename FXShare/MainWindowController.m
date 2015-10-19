@@ -7,7 +7,6 @@
 //
 
 #import "MainWindowController.h"
-#import "CheckPing.h"
 
 @interface MainWindowController ()
 
@@ -53,6 +52,7 @@
 
 - (IBAction)cancelConfiguration:(NSButton *)sender {
     [self.mainWindow endSheet:self.configWindow];
-    [[CheckPing sharedChecker] pingTool];
+    FXPingTool *pingTool = [[FXPingTool alloc] init];
+    [pingTool startPing];
 }
 @end
