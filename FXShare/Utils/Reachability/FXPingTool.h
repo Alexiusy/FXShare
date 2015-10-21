@@ -9,12 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "SimplePing.h"
 
+typedef void(^resultBlock)(BOOL result, NSString *host, NSString *remark);
+
 @interface FXPingTool : NSObject <SimplePingDelegate>
 
-- (void)startPing;
+/**
+ *  A block for ping callback.
+ */
+@property (nonatomic, copy) resultBlock resultBlk;
+
+- (void)startPingWithHost:(NSString *)host completion:(resultBlock)completionHandler;
 
 @end
 
 @interface FXCheckingTool : NSObject
+
++ (instancetype)sharedCheckingTool;
+- (void)startChecking;
 
 @end

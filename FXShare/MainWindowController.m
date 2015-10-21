@@ -52,7 +52,6 @@
 
 - (IBAction)cancelConfiguration:(NSButton *)sender {
     [self.mainWindow endSheet:self.configWindow];
-    FXPingTool *pingTool = [[FXPingTool alloc] init];
-    [pingTool startPing];
+    [[FXCheckingTool sharedCheckingTool] startChecking];
 }
 @end
