@@ -8,15 +8,6 @@
 
 #import "FXPingTool.h"
 
-@interface FXPingTool ()
-
-@property (nonatomic, strong) SimplePing *simplePing;
-@property (nonatomic, strong) NSMutableArray *connectionHosts;
-
-@end
-
-@implementation FXPingTool
-
 #pragma mark - Basic configuration
 
 static dispatch_group_t get_check_server_connection_group() {
@@ -37,6 +28,17 @@ static dispatch_queue_t get_check_server_connection_queue() {
     return check_server_queue;
 }
 
+#pragma mark - Pinging
+
+@interface FXPingTool ()
+
+@property (nonatomic, strong) SimplePing *simplePing;
+@property (nonatomic, strong) NSMutableArray *connectionHosts;
+
+@end
+
+@implementation FXPingTool
+
 #pragma mark - Start pinging
 
 - (void)startPingWithHost:(NSString *)host completion:(resultBlock)completionHandler {
@@ -47,6 +49,10 @@ static dispatch_queue_t get_check_server_connection_queue() {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self timeoutPing];
     });
+}
+
+- (void)dealloc {
+    NSLog(@"Dealloc.");
 }
 
 #pragma mark - Deal with ping result
@@ -98,6 +104,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
 
 @end
 
+#pragma mark - Checking
 
 @interface FXCheckingTool ()
 
@@ -119,6 +126,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
 - (void)startChecking {
     
     self.hosts = [[NSMutableArray alloc] initWithObjects:@"104.128.83.142", @"104.12.32.22", @"104.12.32.23", @"104.12.32.24", @"104.12.32.25", @"104.12.32.26", @"104.12.32.27", @"104.12.32.28", @"104.12.32.29", @"104.12.32.30", @"104.12.32.31", @"104.12.32.32", @"104.12.32.33", @"104.12.32.34", @"104.12.32.35", @"104.12.32.36", @"104.128.83.143", @"104.12.32.38", @"104.12.32.39", @"104.12.32.40", nil];
+    self.onlineHosts = [[NSMutableArray alloc] init];
     
     dispatch_async(get_check_server_connection_queue(), ^{
         NSTimer *timer = [NSTimer timerWithTimeInterval:10.0 target:self selector:@selector(executeChecking) userInfo:nil repeats:YES];
@@ -134,11 +142,15 @@ static dispatch_queue_t get_check_server_connection_queue() {
     for (NSString *host in self.hosts) {
         FXPingTool *pingTool = [[FXPingTool alloc] init];
         [pingTool startPingWithHost:host completion:^(BOOL result, NSString *host, NSString *remark) {
-            if (result) {
+            if (result && ![weakSelf.onlineHosts containsObject:host]) {
                 [weakSelf.onlineHosts addObject:host];
             }
         }];
     }
+}
+
+- (BOOL)isHostOnline:(NSString *)host {
+    return [self.onlineHosts containsObject:host];
 }
 
 @end

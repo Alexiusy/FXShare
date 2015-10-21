@@ -26,5 +26,6 @@ typedef void(^resultBlock)(BOOL result, NSString *host, NSString *remark);
 
 + (instancetype)sharedCheckingTool;
 - (void)startChecking;
+- (BOOL)isHostOnline:(NSString *)host;
 
 @end
