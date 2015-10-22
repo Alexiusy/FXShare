@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		631CE5761BD341BD00715430 /* FXPingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 631CE5751BD341BD00715430 /* FXPingTool.m */; settings = {ASSET_TAGS = (); }; };
 		631CE5781BD3ABDB00715430 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631CE5771BD3ABDB00715430 /* CoreFoundation.framework */; };
+		631CE57B1BD9368300715430 /* FXArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631CE57A1BD9368300715430 /* FXArrayController.m */; settings = {ASSET_TAGS = (); }; };
 		636E682F1BC7ED7C0063192D /* FXCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E682E1BC7ED7C0063192D /* FXCustom.m */; settings = {ASSET_TAGS = (); }; };
 		636E68361BCA60650063192D /* SourceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E68351BCA60650063192D /* SourceViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		639AB1571BB5A4F1007E2E5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1561BB5A4F1007E2E5D /* AppDelegate.m */; };
@@ -43,6 +44,8 @@
 		631CE5741BD341BD00715430 /* FXPingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXPingTool.h; sourceTree = "<group>"; };
 		631CE5751BD341BD00715430 /* FXPingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXPingTool.m; sourceTree = "<group>"; };
 		631CE5771BD3ABDB00715430 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		631CE5791BD9368300715430 /* FXArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXArrayController.h; sourceTree = "<group>"; };
+		631CE57A1BD9368300715430 /* FXArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXArrayController.m; sourceTree = "<group>"; };
 		636E682D1BC7ED7C0063192D /* FXCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXCustom.h; sourceTree = "<group>"; };
 		636E682E1BC7ED7C0063192D /* FXCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXCustom.m; sourceTree = "<group>"; };
 		636E68341BCA60650063192D /* SourceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceViewModel.h; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 			children = (
 				636E68341BCA60650063192D /* SourceViewModel.h */,
 				636E68351BCA60650063192D /* SourceViewModel.m */,
+				631CE5791BD9368300715430 /* FXArrayController.h */,
+				631CE57A1BD9368300715430 /* FXArrayController.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				631CE5761BD341BD00715430 /* FXPingTool.m in Sources */,
 				63DDDD291BCD59D9001BEE03 /* SimplePing.m in Sources */,
 				636E68361BCA60650063192D /* SourceViewModel.m in Sources */,
+				631CE57B1BD9368300715430 /* FXArrayController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

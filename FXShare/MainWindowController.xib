@@ -30,6 +30,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="connect:" target="-2" id="Y6Z-kB-SS2"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-Xj-tol">
                         <rect key="frame" x="170" y="39" width="60" height="23"/>
@@ -41,6 +44,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="disconnect:" target="-2" id="hhX-Wh-tIV"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xYK-vc-jxn">
                         <rect key="frame" x="270" y="39" width="60" height="23"/>
@@ -52,6 +58,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="cancelConnect:" target="-2" id="y54-CF-Y8m"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D8S-hw-V9b">
                         <rect key="frame" x="370" y="39" width="60" height="23"/>
@@ -63,6 +72,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="modify:" target="-2" id="nGS-dT-K4w"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YPu-mt-jkL">
                         <rect key="frame" x="470" y="39" width="60" height="23"/>

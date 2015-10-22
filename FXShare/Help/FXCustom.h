@@ -15,3 +15,10 @@
 @interface FXPanel : NSPanel
 
 @end
+
+
+#pragma mark - Delegate for NSTableView
+
+@interface FXDelegate : NSObject <NSTableViewDelegate>
+
+@end

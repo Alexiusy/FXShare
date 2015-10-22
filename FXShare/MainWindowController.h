@@ -34,6 +34,12 @@
  */
 - (IBAction)cancelConfiguration:(NSButton *)sender;
 
+#pragma mark - Main functions
+- (IBAction)connect:(NSButton *)sender;
+- (IBAction)disconnect:(NSButton *)sender;
+- (IBAction)cancelConnect:(NSButton *)sender;
+- (IBAction)modify:(NSButton *)sender;
+
 #pragma mark - Config window elements
 @property (nonatomic, copy) NSString  *protocol;
 @property (nonatomic, copy) NSString  *userField;

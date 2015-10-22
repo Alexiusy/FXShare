@@ -52,6 +52,17 @@
 
 - (IBAction)cancelConfiguration:(NSButton *)sender {
     [self.mainWindow endSheet:self.configWindow];
-    [[FXCheckingTool sharedCheckingTool] startChecking];
+}
+
+- (IBAction)connect:(NSButton *)sender {
+}
+
+- (IBAction)disconnect:(NSButton *)sender {
+}
+
+- (IBAction)cancelConnect:(NSButton *)sender {
+}
+
+- (IBAction)modify:(NSButton *)sender {
 }
 @end

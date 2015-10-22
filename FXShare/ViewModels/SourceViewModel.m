@@ -14,15 +14,16 @@
 {
     self = [super init];
     if (self) {
-        if (self.selectedProtocol == 0) {
-            self.protocol = @"NFS";
-        } else {
-            self.protocol = @"CIFS";
-        }
-        self.count = 2;
-        self.username = @"Zeacone";
-        self.url = @"127.0.0.1/cifs";
-        self.path = @"/Users/Zeacone/Desktop/show/";
+//        if (self.selectedProtocol == 0) {
+//            self.protocol = @"NFS";
+//        } else {
+//            self.protocol = @"CIFS";
+//        }
+//        self.count = 2;
+//        self.username = @"Zeacone";
+//        self.password = @"password";
+//        self.url = @"127.0.0.1/cifs";
+//        self.path = @"/Users/Zeacone/Desktop/show/";
     }
     return self;
 }
