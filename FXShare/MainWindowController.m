@@ -44,6 +44,13 @@
         NSString *archivePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"archive"];
         [NSKeyedArchiver archiveRootObject:self.sourcedata toFile:archivePath];
     }];
+    
+    
+    if (self.protocol.selectedTag == 0) {
+        
+    }
+    NSDictionary *inputConfig = [NSDictionary dictionaryWithObjectsAndKeys:self.username.stringValue, @"username", self.password.stringValue, @"password", self.url.stringValue, @"url", self.path.stringValue, @"path", nil];
+    [[NSUserDefaults standardUserDefaults] setObject:inputConfig forKey:@"inputConfig"];
 }
 
 - (IBAction)confirmConfiguration:(NSButton *)sender {

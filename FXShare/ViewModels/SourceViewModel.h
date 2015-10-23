@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+static NSInteger static_protocol;
+static NSString *static_username, *static_password, *static_url, *static_path;
+
 @interface SourceViewModel : NSObject <NSCoding>
 
 @property (nonatomic, assign) NSInteger count, selectedProtocol;

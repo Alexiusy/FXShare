@@ -14,16 +14,17 @@
 {
     self = [super init];
     if (self) {
-//        if (self.selectedProtocol == 0) {
-//            self.protocol = @"NFS";
-//        } else {
-//            self.protocol = @"CIFS";
-//        }
-//        self.count = 2;
-//        self.username = @"Zeacone";
-//        self.password = @"password";
-//        self.url = @"127.0.0.1/cifs";
-//        self.path = @"/Users/Zeacone/Desktop/show/";
+        if (self.selectedProtocol == 0) {
+            self.protocol = @"NFS";
+        } else {
+            self.protocol = @"CIFS";
+        }
+        NSDictionary *dictionary = [[NSUserDefaults standardUserDefaults] objectForKey:@"inputConfig"];
+        self.count    = 2;
+        self.username = dictionary[@"username"];
+        self.password = dictionary[@"password"];
+        self.url      = dictionary[@"url"];
+        self.path     = dictionary[@"path"];
     }
     return self;
 }

@@ -8,6 +8,11 @@
             <connections>
                 <outlet property="configWindow" destination="QFZ-JO-Kxd" id="Kbb-vP-z2P"/>
                 <outlet property="mainWindow" destination="KvT-AV-SGK" id="q2u-An-jSg"/>
+                <outlet property="password" destination="ZM4-wz-1Hd" id="1hT-jR-Wwp"/>
+                <outlet property="path" destination="pgB-pX-QVf" id="VRX-lr-thX"/>
+                <outlet property="protocol" destination="le1-T8-j8e" id="WZA-3a-dYs"/>
+                <outlet property="url" destination="QSU-zn-Ake" id="Fck-ZZ-8v8"/>
+                <outlet property="username" destination="wJc-2S-ts5" id="apu-Kk-0c9"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -252,7 +257,11 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="VnP-dU-Zae" name="value" keyPath="password" id="ZFw-xf-HRC"/>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="password" id="Sya-og-Ccn">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QSU-zn-Ake">
@@ -267,7 +276,11 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="VnP-dU-Zae" name="value" keyPath="url" id="ida-f7-VSl"/>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="url" id="F9Q-QI-TEJ">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-pX-QVf">
@@ -282,7 +295,11 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="VnP-dU-Zae" name="value" keyPath="path" id="7Ff-i2-i9S"/>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="path" id="hUa-sE-wvL">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="le1-T8-j8e">
@@ -405,7 +422,7 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="VnP-dU-Zae" name="value" keyPath="username" id="Cpp-Qo-1da"/>
+                            <binding destination="VnP-dU-Zae" name="value" keyPath="username" id="PYE-qZ-tBB"/>
                         </connections>
                     </textField>
                 </subviews>
@@ -468,7 +485,7 @@
             </connections>
             <point key="canvasLocation" x="256" y="717"/>
         </window>
-        <arrayController objectClassName="SourceViewModel" id="yzB-bk-vrN">
+        <arrayController objectClassName="SourceViewModel" id="yzB-bk-vrN" customClass="FXArrayController">
             <declaredKeys>
                 <string>count</string>
                 <string>username</string>
