@@ -49,7 +49,10 @@ static AsyncRequestID requestID = NULL;
 }
 
 - (BOOL)isMountParameterOnline:(NSDictionary *)parameter {
-    return YES;
+    NSArray *keys = [NSArray arrayWithObjects:NSURLVolumeURLKey, NSURLVolumeNameKey, NSURLVolumeIsRemovableKey, nil];
+    NSArray *mountpoints = [[NSArray alloc] init];
+    mountpoints = [[NSFileManager defaultManager] mountedVolumeURLsIncludingResourceValuesForKeys:keys options:NSVolumeEnumerationSkipHiddenVolumes];
+    return [mountpoints containsObject:parameter[@"path"]];
 }
 
 @end
