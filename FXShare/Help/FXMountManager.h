@@ -10,7 +10,7 @@
 #import <NetFS/NetFS.h>
 
 typedef void(^startBlock)();
-typedef void(^endBlock)(BOOL result, NSDictionary *parameter);
+typedef void(^endBlock)(NSInteger status, AsyncRequestID requestID, CFArrayRef mountpoints);
 
 @interface FXMountManager : NSObject
 
@@ -22,20 +22,21 @@ typedef void(^endBlock)(BOOL result, NSDictionary *parameter);
  *  @param completionHandler Callback of ending mount.
  *  @param timeout           Set timeout.
  */
-- (void)mountWithParameter:(NSDictionary *)parameter start:(startBlock)startHandler completion:(endBlock)completionHandler timeout:(NSTimeInterval)timeout;
+- (void)mountWithParameter:(NSDictionary *)parameter onQueue:(dispatch_queue_t)queue start:(startBlock)startHandler completion:(endBlock)completionHandler timeout:(NSTimeInterval)timeout;
 
 /**
  *  Unmount with parameter.
  *
- *  @param parameter Parameter to unmount include username, password, remote url and local path.
+ *  @param parameter         parameter Parameter to unmount include username, password, remote url and local path.
+ *  @param completionHandler Callback of unmount result.
  */
-- (void)unmountWithParameter:(NSDictionary *)parameter;
+- (void)unmountWithParameter:(NSDictionary *)parameter completion:(void(^)(BOOL result, NSString *reason))completionHandler;
 
 /**
  *  Check if the mount disconnect.
  *
  *  @param parameter Mount parameter.
  */
-- (void)isMountParameterOnline:(NSDictionary *)parameter;
+- (BOOL)isMountParameterOnline:(NSDictionary *)parameter;
 
 @end
