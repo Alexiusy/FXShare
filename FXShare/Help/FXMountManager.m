@@ -14,6 +14,11 @@ static AsyncRequestID requestID = NULL;
 
 - (void)mountWithParameter:(NSDictionary *)parameter onQueue:(dispatch_queue_t)queue start:(startBlock)startHandler completion:(endBlock)completionHandler timeout:(NSTimeInterval)timeout {
     
+    self.startBlk = startHandler;
+    self.endBlk = completionHandler;
+    
+    self.startBlk();
+    
     // TODO
     // Convert to UTF-8 for supporting Chinese. Add mount_option and open_options.
     NSString *username = parameter[@"username"];
@@ -24,7 +29,7 @@ static AsyncRequestID requestID = NULL;
     CFMutableDictionaryRef open_options = CFDictionaryCreateMutable(NULL, 0, NULL, NULL);
     CFMutableDictionaryRef mount_options = CFDictionaryCreateMutable(NULL, 0, NULL, NULL);
     
-    NetFSMountURLBlock block = (NetFSMountURLBlock) completionHandler;
+    __weak typeof(self)weakSelf = self;
     
     NetFSMountURLAsync((__bridge CFURLRef)([NSURL URLWithString:url]),
                        (__bridge CFURLRef)([NSURL URLWithString:path]),
@@ -34,7 +39,10 @@ static AsyncRequestID requestID = NULL;
                        mount_options,
                        &requestID,
                        queue,
-                       block);
+                       ^(int status, AsyncRequestID requestID, CFArrayRef mountpoints) {
+                           __strong typeof(weakSelf)strongSelf = weakSelf;
+                           strongSelf.endBlk(status, requestID, mountpoints);
+                       });
 }
 
 - (void)unmountWithParameter:(NSDictionary *)parameter completion:(void(^)(BOOL result, NSString *reason))completionHandler {

@@ -14,6 +14,9 @@ typedef void(^endBlock)(NSInteger status, AsyncRequestID requestID, CFArrayRef m
 
 @interface FXMountManager : NSObject
 
+@property (nonatomic, assign) startBlock startBlk;
+@property (nonatomic, assign) endBlock endBlk;
+
 /**
  *  Mount with parameter.
  *
