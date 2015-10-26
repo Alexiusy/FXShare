@@ -1,0 +1,2 @@
+language: objective-c
+xcodebuild -project FXShare.xcodeproj -target FXShare -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
