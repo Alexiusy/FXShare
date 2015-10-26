@@ -64,7 +64,11 @@
 - (IBAction)connect:(NSButton *)sender {
     dispatch_group_t mount_group = dispatch_group_create();
     dispatch_queue_t mount_queue = dispatch_queue_create("mount.queue", DISPATCH_QUEUE_CONCURRENT);
+    
+    // Add semaphore to control queue-concurrent.
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(5);
     for (NSDictionary *parameter in self.sourceData) {
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         FXMountManager *mountManager = [[FXMountManager alloc] init];
         dispatch_group_async(mount_group, mount_queue, ^{
             [mountManager mountWithParameter:parameter onQueue:mount_queue start:^{
@@ -73,6 +77,7 @@
                 NSLog(@"Mount complete.");
             } timeout:30.0];
         });
+        dispatch_semaphore_signal(semaphore);
     }
     dispatch_group_notify(mount_group, mount_queue, ^{
         NSLog(@"Time to stop progress indicator.");
