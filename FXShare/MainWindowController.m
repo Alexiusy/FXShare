@@ -74,6 +74,9 @@
             } timeout:30.0];
         });
     }
+    dispatch_group_notify(mount_group, mount_queue, ^{
+        NSLog(@"Time to stop progress indicator.");
+    });
 }
 
 - (IBAction)disconnect:(NSButton *)sender {
