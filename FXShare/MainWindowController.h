@@ -10,11 +10,9 @@
 #import "FXPingTool.h"
 #import "FXMountManager.h"
 
-@interface MainWindowController : NSWindowController {
-//    @private
-//    NSString *_username;
-//    NSMutableArray *sourcedata;
-}
+@interface MainWindowController : NSWindowController
+
+@property (nonatomic) NSMutableArray *sourceData;
 
 @property (strong) IBOutlet NSWindow *mainWindow;
 @property (strong) IBOutlet NSWindow *configWindow;

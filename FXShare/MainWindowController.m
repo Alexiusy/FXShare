@@ -64,9 +64,16 @@
 - (IBAction)connect:(NSButton *)sender {
     dispatch_group_t mount_group = dispatch_group_create();
     dispatch_queue_t mount_queue = dispatch_queue_create("mount.queue", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_group_async(mount_group, mount_queue, ^{
-        
-    });
+    for (NSDictionary *parameter in self.sourceData) {
+        FXMountManager *mountManager = [[FXMountManager alloc] init];
+        dispatch_group_async(mount_group, mount_queue, ^{
+            [mountManager mountWithParameter:parameter onQueue:mount_queue start:^{
+                NSLog(@"Mount start.");
+            } completion:^(NSInteger status, AsyncRequestID requestID, CFArrayRef mountpoints) {
+                NSLog(@"Mount complete.");
+            } timeout:30.0];
+        });
+    }
 }
 
 - (IBAction)disconnect:(NSButton *)sender {
