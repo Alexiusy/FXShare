@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "FXPingTool.h"
+#import "FXMountManager.h"
 
 @interface MainWindowController : NSWindowController {
 //    @private
