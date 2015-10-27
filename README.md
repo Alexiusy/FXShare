@@ -10,4 +10,4 @@ Download this repository then open in Xcode and run. Or click `Product`->`Archiv
 # Features
 1. Select protocol from `NFS` and `CIFS` by yourself;
 2. Basic operation such as CRUD;
-3. Monitor the status.
+3. Monitor the status;
