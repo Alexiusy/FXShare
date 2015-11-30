@@ -124,6 +124,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
 @property (nonatomic) LRU_Node *tail;
 @property (nonatomic, assign) NSInteger capacity;
 @property (nonatomic, assign) NSInteger count;
+@property (nonatomic, strong) NSMutableDictionary *hash_hosts;
 
 @end
 
@@ -188,6 +189,10 @@ static dispatch_queue_t get_check_server_connection_queue() {
     node->next = self.head->next;
     self.head->next = node;
     node->next->prev = node;
+}
+
+- (void)setHost:(id)host forKey:(id)key {
+    
 }
 
 @end
