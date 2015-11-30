@@ -158,9 +158,12 @@ static dispatch_queue_t get_check_server_connection_queue() {
 - (void)executeChecking {
     __weak typeof(self)weakSelf = self;
     
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(MAX_CONCURRENT_NUMBER);
     for (NSString *host in self.hosts) {
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         FXPingTool *pingTool = [[FXPingTool alloc] init];
         [pingTool startPingWithHost:host completion:^(BOOL result, NSString *host, NSString *remark) {
+            dispatch_semaphore_signal(semaphore);
             __strong typeof(weakSelf) strongSelf = weakSelf;
             if (result && ![strongSelf.onlineHosts containsObject:host]) {
                 [strongSelf setHost:host forKey:host];
