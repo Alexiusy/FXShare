@@ -157,18 +157,20 @@ static dispatch_queue_t get_check_server_connection_queue() {
 
 - (void)executeChecking {
     __weak typeof(self)weakSelf = self;
+    
     for (NSString *host in self.hosts) {
         FXPingTool *pingTool = [[FXPingTool alloc] init];
         [pingTool startPingWithHost:host completion:^(BOOL result, NSString *host, NSString *remark) {
-            if (result && ![weakSelf.onlineHosts containsObject:host]) {
-                [weakSelf setHost:host forKey:host];
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (result && ![strongSelf.onlineHosts containsObject:host]) {
+                [strongSelf setHost:host forKey:host];
             }
         }];
     }
 }
 
 - (BOOL)isHostOnline:(NSString *)host {
-    return [self.onlineHosts containsObject:host];
+    return [self getHostFromKey:host] != nil;
 }
 
 - (void)initLRUNode {
@@ -200,7 +202,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
     --self.count;
 }
 
-- (void)setHost:(id)host forKey:(id)key {
+- (void)setHost:(NSString *)host forKey:(NSString *)key {
     if (![self.hash_hosts valueForKey:key]) {
         LRU_Node *node = {nil, nil, NULL, NULL};
         if (self.count == self.capacity) [self removeNode];
