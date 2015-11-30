@@ -13,8 +13,8 @@
 #define CAPACITY 30
 
 typedef struct LRU_Node {
-    __unsafe_unretained id key;
-    __unsafe_unretained id value;
+    __unsafe_unretained NSString *key;
+    __unsafe_unretained NSString *value;
     struct LRU_Node *prev;
     struct LRU_Node *next;
 } LRU_Node;
@@ -199,7 +199,24 @@ static dispatch_queue_t get_check_server_connection_queue() {
 }
 
 - (void)setHost:(id)host forKey:(id)key {
-    
+    if (![self.hash_hosts valueForKey:key]) {
+        LRU_Node *node = {nil, nil, NULL, NULL};
+        if (self.count == self.capacity) [self removeNode];
+        
+        node->key = key;
+        node->value = host;
+        [self.hash_hosts setObject:(__bridge id _Nonnull)(node) forKey:key];
+        [self moveNodeToFront:node];
+        ++self.count;
+    }
+}
+
+- (NSString *)getHostFromKey:(NSString *)key {
+    if (![self.hash_hosts valueForKey:key]) {
+        return nil;
+    } else {
+        
+    }
 }
 
 @end
