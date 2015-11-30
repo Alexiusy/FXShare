@@ -11,6 +11,7 @@
 #pragma mark - Basic configuration
 
 #define CAPACITY 30
+#define MAX_CONCURRENT_NUMBER 5
 
 typedef struct LRU_Node {
     __unsafe_unretained NSString *key;
@@ -160,7 +161,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
         FXPingTool *pingTool = [[FXPingTool alloc] init];
         [pingTool startPingWithHost:host completion:^(BOOL result, NSString *host, NSString *remark) {
             if (result && ![weakSelf.onlineHosts containsObject:host]) {
-                [weakSelf.onlineHosts addObject:host];
+                [weakSelf setHost:host forKey:host];
             }
         }];
     }
@@ -171,6 +172,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
 }
 
 - (void)initLRUNode {
+    self.hash_hosts = [NSMutableDictionary dictionary];
     self.capacity = CAPACITY;
     self.count = 0;
     self.head->prev = NULL;
@@ -212,10 +214,13 @@ static dispatch_queue_t get_check_server_connection_queue() {
 }
 
 - (NSString *)getHostFromKey:(NSString *)key {
-    if (![self.hash_hosts valueForKey:key]) {
+    LRU_Node *node = (__bridge LRU_Node *)([self.hash_hosts valueForKey:key]);
+    if (!node) {
         return nil;
     } else {
-        
+        [self detachNode:node];
+        [self moveNodeToFront:node];
+        return node->value;
     }
 }
 
