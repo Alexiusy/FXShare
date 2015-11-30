@@ -231,6 +231,11 @@
                     <constraint firstItem="xYK-vc-jxn" firstAttribute="width" secondItem="JWE-sx-R6T" secondAttribute="width" id="wp8-29-Tud"/>
                     <constraint firstItem="D8S-hw-V9b" firstAttribute="leading" secondItem="xYK-vc-jxn" secondAttribute="trailing" constant="40" id="z5u-Ew-We0"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                        <color key="value" red="0.88235294117647056" green="0.33167146381578949" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="RJw-3k-2iC"/>

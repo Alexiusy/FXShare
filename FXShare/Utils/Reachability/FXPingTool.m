@@ -10,6 +10,15 @@
 
 #pragma mark - Basic configuration
 
+#define CAPACITY 30
+
+typedef struct LRU_Node {
+    __unsafe_unretained id key;
+    __unsafe_unretained id value;
+    struct LRU_Node *prev;
+    struct LRU_Node *next;
+} LRU_Node;
+
 static dispatch_group_t get_check_server_connection_group() {
     static dispatch_group_t check_server_group;
     static dispatch_once_t onceToken;
@@ -110,6 +119,12 @@ static dispatch_queue_t get_check_server_connection_queue() {
 
 @property (nonatomic, strong) NSMutableArray *hosts, *onlineHosts;
 
+// About LRU
+@property (nonatomic) LRU_Node *head;
+@property (nonatomic) LRU_Node *tail;
+@property (nonatomic, assign) NSInteger capacity;
+@property (nonatomic, assign) NSInteger count;
+
 @end
 
 @implementation FXCheckingTool
@@ -135,6 +150,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
         [runloop addTimer:timer forMode:NSRunLoopCommonModes];
         [runloop run];
     });
+    [self initLRUNode];
 }
 
 - (void)executeChecking {
@@ -151,6 +167,27 @@ static dispatch_queue_t get_check_server_connection_queue() {
 
 - (BOOL)isHostOnline:(NSString *)host {
     return [self.onlineHosts containsObject:host];
+}
+
+- (void)initLRUNode {
+    self.capacity = CAPACITY;
+    self.count = 0;
+    self.head->prev = NULL;
+    self.head->next = self.tail;
+    self.tail->prev = self.head;
+    self.tail->next = NULL;
+}
+
+- (void)detachNode:(LRU_Node *)node {
+    node->prev->next = node->next;
+    node->next->prev = node->prev;
+}
+
+- (void)moveNodeToFront:(LRU_Node *)node {
+    node->prev = self.head;
+    node->next = self.head->next;
+    self.head->next = node;
+    node->next->prev = node;
 }
 
 @end
