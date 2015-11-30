@@ -191,6 +191,13 @@ static dispatch_queue_t get_check_server_connection_queue() {
     node->next->prev = node;
 }
 
+- (void)removeNode {
+    LRU_Node *node = self.tail->prev;
+    [self detachNode:node];
+    [self.hash_hosts removeObjectForKey:node->key];
+    --self.count;
+}
+
 - (void)setHost:(id)host forKey:(id)key {
     
 }
