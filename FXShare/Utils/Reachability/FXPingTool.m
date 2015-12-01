@@ -172,6 +172,7 @@ static dispatch_queue_t get_check_server_connection_queue() {
     }
 }
 
+// 判断所给 IP 是否在线，不在线执行 ping 操作
 - (BOOL)isHostOnline:(NSString *)host {
     return [self getHostFromKey:host] != nil;
 }
