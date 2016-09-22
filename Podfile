@@ -9,12 +9,12 @@ target 'FXShare' do
   pod 'FMDB', '~> 2.6.2'
 
   target 'FXShareTests' do
-    inherit! :search_paths
+    # inherit! :search_paths
     # Pods for testing
   end
 
   target 'FXShareUITests' do
-    inherit! :search_paths
+    # inherit! :search_paths
     # Pods for testing
   end
 
