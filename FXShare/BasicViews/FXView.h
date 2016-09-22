@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FXView.h
 //  FXShare
 //
 //  Created by Zeacone on 16/9/18.
@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+IB_DESIGNABLE
+@interface FXView : NSView
 
+@property (nonatomic, strong) IBInspectable NSColor *backgroundColor;
 
 @end
-

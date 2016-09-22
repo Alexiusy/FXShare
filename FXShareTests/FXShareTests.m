@@ -2,8 +2,8 @@
 //  FXShareTests.m
 //  FXShareTests
 //
-//  Created by Zeacone on 15/9/25.
-//  Copyright © 2015年 Zeacone. All rights reserved.
+//  Created by Zeacone on 16/9/18.
+//  Copyright © 2016年 Zeacone. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

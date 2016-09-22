@@ -1,15 +1,13 @@
 //
-//  AppDelegate.h
+//  FXMainModel.m
 //  FXShare
 //
 //  Created by Zeacone on 16/9/18.
 //  Copyright © 2016年 Zeacone. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "FXDataSourceModel.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@implementation FXDataSourceModel
 
 @end
-
