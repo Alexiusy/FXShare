@@ -14,12 +14,20 @@
 
 @property (nonatomic, strong) FXNewInfoController *infoController;
 
+@property (nonatomic, strong) NSMutableArray<NSString *> *statusArray;
+
 @end
 
 @implementation MainWindowController
 
 - (instancetype)initWithWindowNibName:(NSString *)windowNibName {
     self.models = [[FXDatabaseManager defaultDatabaseManager] queryFromDatabase];
+    self.statusArray = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < self.models.count; i++) {
+        [self.statusArray addObject:@"online"];
+    }
+    
     return [super initWithWindowNibName:windowNibName];
 }
 
@@ -90,7 +98,16 @@
     else if ([tableColumn.identifier isEqualToString:@"status"])
     {
         NSImageView *statusview = (NSImageView *)result.subviews.firstObject;
-        statusview.tag = row * 100;
+        
+        NSImage *image;
+        
+        if ([self.statusArray[row] isEqualToString:@"online"]) {
+            image = [NSImage imageNamed:@"icon_status-online"];
+        } else {
+            image = [NSImage imageNamed:@"icon_status-inactive"];
+        }
+        statusview.image = image;
+//        statusview.tag = row * 100;
     }
     else if ([tableColumn.identifier isEqualToString:@"operation"])
     {
@@ -139,10 +156,27 @@
     
     NSTableCellView *result = [self.tableView makeViewWithIdentifier:@"status" owner:self];
     
-    NSImageView *image = (NSImageView *)result.subviews.firstObject;
-    [image setImage:[NSImage imageNamed:@"icon_status-online"]];
+    [sender setImage:[NSImage imageNamed:@"icon_status-online"]];
+    
+    [self.statusArray replaceObjectAtIndex:row withObject:@"offline"];
 //    image.image = [NSImage imageNamed:@"icon_status-online"];
-    [self.tableView reloadData];
+    NSIndexSet *rowSet = [NSIndexSet indexSetWithIndex:row];
+    NSIndexSet *colSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 6)];
+    [self.tableView reloadDataForRowIndexes:rowSet columnIndexes:colSet];
+    
+    FXDataSourceModel *model = [FXDataSourceModel new];
+    model.remoteAddress = @"1234";
+    model.localAddress = @"1234";
+    model.protocol = MountProtocolNFS;
+    model.username = @"1234";
+    model.password = @"1234";
+    
+    [[FXDatabaseManager defaultDatabaseManager] insertModel:model];
+    self.models = [[FXDatabaseManager defaultDatabaseManager] queryFromDatabase];
+    
+    [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.models.count-1] withAnimation:NSTableViewAnimationSlideUp];
+    
+    
 }
 
 - (IBAction)editInformation:(NSButton *)sender {
