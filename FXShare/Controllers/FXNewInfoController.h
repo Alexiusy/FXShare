@@ -9,9 +9,17 @@
 #import <Cocoa/Cocoa.h>
 #import "FXDatabaseManager.h"
 
+@protocol FXNewInfoDelegate <NSObject>
+
+- (void)feedbackModel:(FXDataSourceModel *)model;
+
+@end
+
 @interface FXNewInfoController : NSWindowController
 
-@property (nonatomic, assign) void(^feedbackBlock)(void);
+@property (nonatomic, weak) id<FXNewInfoDelegate> delegate;
+
+@property (nonatomic, assign) void(^feedbackBlock)(FXDataSourceModel *model);
 
 - (IBAction)selectProtocol:(NSPopUpButton *)sender;
 

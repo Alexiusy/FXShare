@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CB185ABE3C0F57A7475C999 /* libPods-FXShareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FE5779482C3666DC6CF16D /* libPods-FXShareTests.a */; };
+		233228C4303C875A2E4D9363 /* libPods-FXShare-FXShareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5721A9378E11A77BA81E2D7E /* libPods-FXShare-FXShareTests.a */; };
 		365A8F2A5AC0D5805DE77CE7 /* libPods-FXShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE0255A04A17C51F6A1A8D4 /* libPods-FXShare.a */; };
 		54BBBAA88369AAE93884F6E9 /* libPods-FXShareUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E486ECFF719DCFBEB308BC /* libPods-FXShareUITests.a */; };
 		6311EF261D92F4BF00C1478C /* icon_status-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 6311EF231D92F4BF00C1478C /* icon_status-inactive.png */; };
@@ -39,6 +40,7 @@
 		63CB99551D8F8B0F008CFE33 /* FXNewInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CB99531D8F8B0F008CFE33 /* FXNewInfoController.m */; };
 		63CB99561D8F8B0F008CFE33 /* FXNewInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CB99541D8F8B0F008CFE33 /* FXNewInfoController.xib */; };
 		63CB99621D91311F008CFE33 /* FXDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CB99611D91311F008CFE33 /* FXDatabaseManager.m */; };
+		934A4E5F487FD373B7EBF78C /* libPods-FXShare-FXShareUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77CDEE52BE552E3BCE22C3FE /* libPods-FXShare-FXShareUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,9 @@
 /* Begin PBXFileReference section */
 		16EB6DD5DD7D04EF8489E03D /* Pods-FXShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-FXShare/Pods-FXShare.release.xcconfig"; sourceTree = "<group>"; };
 		17E486ECFF719DCFBEB308BC /* libPods-FXShareUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FXShareUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E469857D037F5330C1657CB /* Pods-FXShare-FXShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShare-FXShareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FXShare-FXShareTests/Pods-FXShare-FXShareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		299189F86B46778B8208AA4B /* Pods-FXShareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FXShareUITests/Pods-FXShareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5721A9378E11A77BA81E2D7E /* libPods-FXShare-FXShareTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FXShare-FXShareTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6311EF231D92F4BF00C1478C /* icon_status-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_status-inactive.png"; sourceTree = "<group>"; };
 		6311EF241D92F4BF00C1478C /* icon_status-offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_status-offline.png"; sourceTree = "<group>"; };
 		6311EF251D92F4BF00C1478C /* icon_status-online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_status-online.png"; sourceTree = "<group>"; };
@@ -114,11 +118,15 @@
 		63CB99541D8F8B0F008CFE33 /* FXNewInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FXNewInfoController.xib; sourceTree = "<group>"; };
 		63CB99601D91311F008CFE33 /* FXDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXDatabaseManager.h; sourceTree = "<group>"; };
 		63CB99611D91311F008CFE33 /* FXDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXDatabaseManager.m; sourceTree = "<group>"; };
+		6B3FA3B86F8C532F90FB687B /* Pods-FXShare-FXShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShare-FXShareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FXShare-FXShareTests/Pods-FXShare-FXShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		77CDEE52BE552E3BCE22C3FE /* libPods-FXShare-FXShareUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FXShare-FXShareUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C10F4E729CFABA433686A3 /* Pods-FXShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FXShareTests/Pods-FXShareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC7C31BE8DAD5035ED199E8 /* Pods-FXShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FXShareUITests/Pods-FXShareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8CB9AE37CFE9CE3FAE328B3F /* Pods-FXShare-FXShareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShare-FXShareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FXShare-FXShareUITests/Pods-FXShare-FXShareUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8EE0255A04A17C51F6A1A8D4 /* libPods-FXShare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FXShare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927F1C9AEAEBE073415FB07F /* Pods-FXShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FXShare/Pods-FXShare.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB9CD87E2FC0D124C999EDC /* Pods-FXShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FXShareTests/Pods-FXShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		E7063859920DE560930F94D4 /* Pods-FXShare-FXShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXShare-FXShareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FXShare-FXShareUITests/Pods-FXShare-FXShareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E7FE5779482C3666DC6CF16D /* libPods-FXShareTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FXShareTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CB185ABE3C0F57A7475C999 /* libPods-FXShareTests.a in Frameworks */,
+				233228C4303C875A2E4D9363 /* libPods-FXShare-FXShareTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54BBBAA88369AAE93884F6E9 /* libPods-FXShareUITests.a in Frameworks */,
+				934A4E5F487FD373B7EBF78C /* libPods-FXShare-FXShareUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +354,8 @@
 				8EE0255A04A17C51F6A1A8D4 /* libPods-FXShare.a */,
 				E7FE5779482C3666DC6CF16D /* libPods-FXShareTests.a */,
 				17E486ECFF719DCFBEB308BC /* libPods-FXShareUITests.a */,
+				5721A9378E11A77BA81E2D7E /* libPods-FXShare-FXShareTests.a */,
+				77CDEE52BE552E3BCE22C3FE /* libPods-FXShare-FXShareUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -357,6 +369,10 @@
 				CFB9CD87E2FC0D124C999EDC /* Pods-FXShareTests.release.xcconfig */,
 				299189F86B46778B8208AA4B /* Pods-FXShareUITests.debug.xcconfig */,
 				8AC7C31BE8DAD5035ED199E8 /* Pods-FXShareUITests.release.xcconfig */,
+				1E469857D037F5330C1657CB /* Pods-FXShare-FXShareTests.debug.xcconfig */,
+				6B3FA3B86F8C532F90FB687B /* Pods-FXShare-FXShareTests.release.xcconfig */,
+				8CB9AE37CFE9CE3FAE328B3F /* Pods-FXShare-FXShareUITests.debug.xcconfig */,
+				E7063859920DE560930F94D4 /* Pods-FXShare-FXShareUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -545,7 +561,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FXShareUITests/Pods-FXShareUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FXShare-FXShareUITests/Pods-FXShare-FXShareUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73FF7D4218F8B72EB49A17BF /* 📦 Embed Pods Frameworks */ = {
@@ -560,7 +576,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FXShareTests/Pods-FXShareTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FXShare-FXShareTests/Pods-FXShare-FXShareTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B087A82F63C2C70FCB6E0F13 /* 📦 Embed Pods Frameworks */ = {
@@ -590,7 +606,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FXShareTests/Pods-FXShareTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FXShare-FXShareTests/Pods-FXShare-FXShareTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C715695AB38CA4ED53E37271 /* 📦 Check Pods Manifest.lock */ = {
@@ -804,7 +820,7 @@
 		};
 		63CB98EA1D8E39DF008CFE33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88C10F4E729CFABA433686A3 /* Pods-FXShareTests.debug.xcconfig */;
+			baseConfigurationReference = 1E469857D037F5330C1657CB /* Pods-FXShare-FXShareTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -818,7 +834,7 @@
 		};
 		63CB98EB1D8E39DF008CFE33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFB9CD87E2FC0D124C999EDC /* Pods-FXShareTests.release.xcconfig */;
+			baseConfigurationReference = 6B3FA3B86F8C532F90FB687B /* Pods-FXShare-FXShareTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -832,7 +848,7 @@
 		};
 		63CB98ED1D8E39DF008CFE33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 299189F86B46778B8208AA4B /* Pods-FXShareUITests.debug.xcconfig */;
+			baseConfigurationReference = 8CB9AE37CFE9CE3FAE328B3F /* Pods-FXShare-FXShareUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FXShareUITests/Info.plist;
@@ -845,7 +861,7 @@
 		};
 		63CB98EE1D8E39DF008CFE33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AC7C31BE8DAD5035ED199E8 /* Pods-FXShareUITests.release.xcconfig */;
+			baseConfigurationReference = E7063859920DE560930F94D4 /* Pods-FXShare-FXShareUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FXShareUITests/Info.plist;

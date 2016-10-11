@@ -26,8 +26,6 @@
     self.window.titlebarAppearsTransparent = YES;
     
     self.model = [FXDataSourceModel new];
-    
-    
 }
 
 - (IBAction)selectProtocol:(NSPopUpButton *)sender {
@@ -47,9 +45,19 @@
     self.model.username = self.userField.stringValue;
     self.model.password = self.passField.stringValue;
     
-    _feedbackBlock();
+    if (self.delegate && [self.delegate respondsToSelector:@selector(feedbackModel:)]) {
+        [self.delegate feedbackModel:self.model];
+    }
     
     [[FXDatabaseManager defaultDatabaseManager] insertModel:self.model];
+    [self.window orderOut:nil];
+}
+
+- (IBAction)cancel:(NSButton *)sender {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(feedbackModel:)]) {
+        [self.delegate feedbackModel:nil];
+    }
     [self.window orderOut:nil];
 }
 
@@ -57,8 +65,4 @@
     NSLog(@"hahahaha");
 }
 
-- (IBAction)cancel:(NSButton *)sender {
-    _feedbackBlock();
-    [self.window orderOut:nil];
-}
 @end

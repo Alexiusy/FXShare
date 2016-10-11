@@ -10,7 +10,7 @@
 #import "INAppStoreWindow.h"
 #import "FXNewInfoController.h"
 
-@interface MainWindowController ()
+@interface MainWindowController () <FXNewInfoDelegate>
 
 @property (nonatomic, strong) FXNewInfoController *infoController;
 
@@ -21,7 +21,7 @@
 @implementation MainWindowController
 
 - (instancetype)initWithWindowNibName:(NSString *)windowNibName {
-    self.models = [[FXDatabaseManager defaultDatabaseManager] queryFromDatabase];
+    self.models = [[[FXDatabaseManager defaultDatabaseManager] queryFromDatabase] mutableCopy];
     self.statusArray = [NSMutableArray array];
     
     for (NSInteger i = 0; i < self.models.count; i++) {
@@ -78,7 +78,6 @@
     
     NSTableCellView *result = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
     
-//    result.textField.stringValue = @"123";
     if ([tableColumn.identifier isEqualToString:@"number"])
     {
         result.textField.stringValue = [NSString stringWithFormat:@"%ld", row+1];
@@ -107,7 +106,6 @@
             image = [NSImage imageNamed:@"icon_status-inactive"];
         }
         statusview.image = image;
-//        statusview.tag = row * 100;
     }
     else if ([tableColumn.identifier isEqualToString:@"operation"])
     {
@@ -125,78 +123,36 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-
-//    CGRect panelRect = CGRectOffset(self.window.frame, CGRectGetWidth(self.window.frame), 0);
-//    NSPanel *panel = [[NSPanel alloc] initWithContentRect:panelRect styleMask:NSBorderlessWindowMask | NSNonactivatingPanelMask backing:NSBackingStoreBuffered defer:YES];
-//    [panel setLevel:NSScreenSaverWindowLevel];
-//    [panel orderFront:nil];
-    
     
 }
 
+#pragma mark - Side menu method
 - (IBAction)addNewModel:(NSButton *)sender {
     
     self.infoController = [[FXNewInfoController alloc] initWithWindowNibName:@"FXNewInfoController"];
+    self.infoController.delegate = self;
     
-    __weak typeof(self) weakSelf = self;
-    [self.infoController setFeedbackBlock:^{
-//        NSLog(@"%@", weakSelf.windowNibName);
-//        __strong typeof(weakSelf) strongSelf = weakSelf;
-    }];
+    [self.window beginSheet:self.infoController.window completionHandler:nil];
+}
+
+- (void)feedbackModel:(FXDataSourceModel *)model {
     
-    [self.window beginSheet:self.infoController.window completionHandler:^(NSModalResponse returnCode) {
-        
-        NSLog(@"return code = %@", @(returnCode));
-    }];
+    if (!model) {
+        return;
+    }
+    [self.models addObject:model];
+    [self.statusArray addObject:@"offline"];
+    [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.models.count-1] withAnimation:NSTableViewAnimationSlideUp];
 }
 
 - (void)buttonAction:(NSButton *)sender {
-    NSLog(@"hijack.");
+    
     NSInteger row = (sender.tag - 2) / 10;
     
-    NSTableCellView *result = [self.tableView makeViewWithIdentifier:@"status" owner:self];
-    
-    [sender setImage:[NSImage imageNamed:@"icon_status-online"]];
-    
     [self.statusArray replaceObjectAtIndex:row withObject:@"offline"];
-//    image.image = [NSImage imageNamed:@"icon_status-online"];
     NSIndexSet *rowSet = [NSIndexSet indexSetWithIndex:row];
     NSIndexSet *colSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 6)];
     [self.tableView reloadDataForRowIndexes:rowSet columnIndexes:colSet];
-    
-    FXDataSourceModel *model = [FXDataSourceModel new];
-    model.remoteAddress = @"1234";
-    model.localAddress = @"1234";
-    model.protocol = MountProtocolNFS;
-    model.username = @"1234";
-    model.password = @"1234";
-    
-    [[FXDatabaseManager defaultDatabaseManager] insertModel:model];
-    self.models = [[FXDatabaseManager defaultDatabaseManager] queryFromDatabase];
-    
-    [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.models.count-1] withAnimation:NSTableViewAnimationSlideUp];
-    
-    
 }
 
-- (IBAction)editInformation:(NSButton *)sender {
-    
-//    sender.tag
-}
-
-- (IBAction)deleteInformation:(NSButton *)sender {
-}
-
-- (IBAction)offline:(NSButton *)sender {
-    
-    NSInteger row = (sender.tag - 2) / 10;
-    
-    NSTableCellView *result = [self.tableView makeViewWithIdentifier:@"status" owner:self];
-    
-    NSImageView *image = (NSImageView *)[result viewWithTag:row];
-    image.image = [NSImage imageNamed:@"icon_status-online"];
-}
-
-- (IBAction)openDiretory:(NSButton *)sender {
-}
 @end

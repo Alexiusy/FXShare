@@ -14,17 +14,8 @@
 @property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSScrollView *scrollview;
 
-@property (nonatomic, strong) NSArray<FXDataSourceModel *> *models;
+@property (nonatomic, strong) NSMutableArray<FXDataSourceModel *> *models;
+
 - (IBAction)addNewModel:(NSButton *)sender;
-
-
-- (IBAction)editInformation:(NSButton *)sender;
-
-- (IBAction)deleteInformation:(NSButton *)sender;
-
-- (IBAction)offline:(NSButton *)sender;
-
-- (IBAction)openDiretory:(NSButton *)sender;
-
 
 @end
