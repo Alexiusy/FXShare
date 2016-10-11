@@ -61,9 +61,7 @@
     
     [self.scrollview setDrawsBackground:NO];
     self.tableView.backgroundColor = [NSColor clearColor];
-//    [self.tableView setAlphaValue:0.2];
-//    self.scrollview.backgroundColor = [NSColor clearColor];
-    
+    // 隐藏最后一列后面的多余部分
     [self.tableView sizeLastColumnToFit];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -147,7 +145,9 @@
 
 - (void)buttonAction:(NSButton *)sender {
     
-    NSInteger row = (sender.tag - 2) / 10;
+    NSInteger row = sender.tag / 10;
+    
+    NSLog(@"row = %@, col = %@", @(sender.tag/10), @(sender.tag%10));
     
     [self.statusArray replaceObjectAtIndex:row withObject:@"offline"];
     NSIndexSet *rowSet = [NSIndexSet indexSetWithIndex:row];
