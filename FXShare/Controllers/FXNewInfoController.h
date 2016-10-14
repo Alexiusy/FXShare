@@ -31,6 +31,8 @@
 @property (weak) IBOutlet NSTextField *userField;
 @property (weak) IBOutlet NSSecureTextField *passField;
 
+- (IBAction)selectFileDir:(NSButton *)sender;
+
 - (IBAction)confirm:(NSButton *)sender;
 - (IBAction)cancel:(NSButton *)sender;
 

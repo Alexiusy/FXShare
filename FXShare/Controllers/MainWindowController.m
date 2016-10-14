@@ -25,7 +25,7 @@
     self.statusArray = [NSMutableArray array];
     
     for (NSInteger i = 0; i < self.models.count; i++) {
-        [self.statusArray addObject:@"online"];
+        [self.statusArray addObject:@"offline"];
     }
     
     return [super initWithWindowNibName:windowNibName];
@@ -101,7 +101,7 @@
         if ([self.statusArray[row] isEqualToString:@"online"]) {
             image = [NSImage imageNamed:@"icon_status-online"];
         } else {
-            image = [NSImage imageNamed:@"icon_status-inactive"];
+            image = [NSImage imageNamed:@"icon_status-offline"];
         }
         statusview.image = image;
     }

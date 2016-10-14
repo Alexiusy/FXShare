@@ -64,12 +64,12 @@
                                             </allowedInputSourceLocales>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="exterior" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-4s-C4w">
+                                    <textField focusRingType="exterior" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-4s-C4w">
                                         <rect key="frame" x="82" y="167" width="330" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="jtb-zb-xPK"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="exterior" placeholderString="本地地址" drawsBackground="YES" usesSingleLineMode="YES" id="Ixx-6m-qd9">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="exterior" placeholderString="本地地址" drawsBackground="YES" usesSingleLineMode="YES" id="Ixx-6m-qd9">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -108,9 +108,9 @@
                                     </secureTextField>
                                     <button verticalHuggingPriority="750" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-FO-dK8">
                                         <rect key="frame" x="316" y="41" width="60" height="21"/>
-                                        <buttonCell key="cell" type="recessed" title="OK" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="44J-IC-DsD">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                            <font key="font" size="12" name="PingFangSC-Semibold"/>
+                                        <buttonCell key="cell" type="inline" title="OK" bezelStyle="inline" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="44J-IC-DsD">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="confirm:" target="-2" id="rkn-2H-QNg"/>
@@ -122,25 +122,41 @@
                                             <constraint firstAttribute="height" constant="20" id="7Cz-wO-nBb"/>
                                             <constraint firstAttribute="width" constant="60" id="vqM-1O-dsi"/>
                                         </constraints>
-                                        <buttonCell key="cell" type="recessed" title="Cancel" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cSe-0A-IIV">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                            <font key="font" size="12" name="PingFangSC-Semibold"/>
+                                        <buttonCell key="cell" type="inline" title="Cancel" bezelStyle="inline" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cSe-0A-IIV">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="cancel:" target="-2" id="eyg-EJ-UVb"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fCA-Od-32u">
+                                        <rect key="frame" x="412" y="167" width="80" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0Ao-WV-Gzw"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" title="选择文件夹" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="vOb-Fn-TFf">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="selectFileDir:" target="-2" id="5uz-iJ-xkk"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hgJ-FO-dK8" firstAttribute="height" secondItem="X4z-jP-GtK" secondAttribute="height" id="5Dh-Rw-I0R"/>
                                     <constraint firstItem="8dN-4A-qrL" firstAttribute="width" secondItem="enZ-qR-xsd" secondAttribute="width" id="5ZT-rb-HY0"/>
+                                    <constraint firstItem="fCA-Od-32u" firstAttribute="height" secondItem="uuV-4s-C4w" secondAttribute="height" id="BuL-af-vX8"/>
                                     <constraint firstItem="enZ-qR-xsd" firstAttribute="centerX" secondItem="Kfr-bh-HKk" secondAttribute="centerX" id="Ecy-la-ct7"/>
                                     <constraint firstItem="8uS-bs-oH1" firstAttribute="width" secondItem="enZ-qR-xsd" secondAttribute="width" id="Ew3-ug-u5G"/>
                                     <constraint firstItem="uuV-4s-C4w" firstAttribute="width" secondItem="enZ-qR-xsd" secondAttribute="width" id="JbY-em-PZP"/>
                                     <constraint firstItem="cUl-It-9oz" firstAttribute="top" secondItem="enZ-qR-xsd" secondAttribute="bottom" constant="15" id="Mlt-2h-cTh"/>
+                                    <constraint firstItem="fCA-Od-32u" firstAttribute="top" secondItem="uuV-4s-C4w" secondAttribute="top" id="Nrd-gn-mXg"/>
                                     <constraint firstItem="uuV-4s-C4w" firstAttribute="top" secondItem="cUl-It-9oz" secondAttribute="bottom" constant="15" id="QF7-VZ-xii"/>
                                     <constraint firstItem="enZ-qR-xsd" firstAttribute="top" secondItem="Kfr-bh-HKk" secondAttribute="top" constant="30" id="Rsl-JB-OUj"/>
                                     <constraint firstItem="hgJ-FO-dK8" firstAttribute="centerX" secondItem="Kfr-bh-HKk" secondAttribute="centerX" multiplier="1.4" id="TWk-eb-ZHo"/>
+                                    <constraint firstItem="fCA-Od-32u" firstAttribute="leading" secondItem="uuV-4s-C4w" secondAttribute="trailing" id="TrP-Cn-1DZ"/>
                                     <constraint firstItem="X4z-jP-GtK" firstAttribute="centerX" secondItem="Kfr-bh-HKk" secondAttribute="centerX" multiplier="0.6" id="V1H-84-AWT"/>
                                     <constraint firstItem="hgJ-FO-dK8" firstAttribute="width" secondItem="X4z-jP-GtK" secondAttribute="width" id="WKZ-CU-fh9"/>
                                     <constraint firstItem="8uS-bs-oH1" firstAttribute="top" secondItem="uuV-4s-C4w" secondAttribute="bottom" constant="15" id="XgE-5B-I5R"/>

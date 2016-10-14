@@ -38,6 +38,19 @@
     }
 }
 
+- (IBAction)selectFileDir:(NSButton *)sender {
+    
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    openPanel.canChooseFiles = NO;
+    openPanel.canChooseDirectories = YES;
+    openPanel.allowsMultipleSelection = NO;
+    openPanel.directoryURL = [NSURL URLWithString:NSHomeDirectory()];
+    
+    if ([openPanel runModal] == NSFileHandlingPanelOKButton) {
+        self.localField.stringValue = openPanel.URL.path;
+    }
+}
+
 - (IBAction)confirm:(NSButton *)sender {
     
     self.model.remoteAddress = self.remoteField.stringValue;
@@ -51,6 +64,12 @@
     
     [[FXDatabaseManager defaultDatabaseManager] insertModel:self.model];
     [self.window orderOut:nil];
+}
+
+#pragma mark - Verify remote address
+- (void)verifyRemoteAddress {
+    
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@""]
 }
 
 - (IBAction)cancel:(NSButton *)sender {
